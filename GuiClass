@@ -19,6 +19,14 @@ public final class GuiWhatever extends GuiScreen{
      }
     public void drawScreen(int x2, int y2, float z2) {
         this.drawDefaultBackground();
+        
+        //Overhead Text
+
+        GL11.glPushMatrix();
+        GL11.glScaled(4F, 4F, 1F);
+        drawCenteredString(mc.fontRendererObj, "Title", width / 8, 10, 0xffffffff);
+        GL11.glPopMatrix();
+        
         this.drawCenteredString(this.mc.fontRendererObj, "Title", width / 2, 20, -1);
         this.drawString(this.mc.fontRendererObj, "Text", width / 2 - 50, 60, -1);
         this.drawString(this.mc.fontRendererObj, "Text", width / 2 - 50, 70, -1);
